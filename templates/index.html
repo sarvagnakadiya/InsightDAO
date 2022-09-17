@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> See all dao </title>
+  <link rel="stylesheet" href={% static "css/daos.css" %}>
+  <link rel="stylesheet" href={% static "css/bg_gradient.css" %}>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600&family=Kanit:wght@600&family=Mea+Culpa&family=Nunito:wght@200;400;600;700;800&family=Raleway:wght@700&display=swap');
+  </style>
+</head>
+
+<body class="bdy bg-gradient-to-bl">
+  <!-- <div class="gradient-custom"> -->
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light9">
+      <a class="navbar-brand" href="#">Insights DAO</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href={% url 'set_chart' %}>Features</a>
+          <a class="nav-item nav-link" href={% url 'proposal_info' %}>Proposals</a>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+  <div class="herodiv">
+
+
+    <div class="heading">
+      <img src={% static "img/InsightDAOlogo.png" %} alt="Trulli" width="250">
+      <img src={% static "img/infinity.png" %} alt="Trulli" width="100" height="100" class="infinity">
+      <img src={% static "img/octahedron.png" %} alt="Trulli" width="100" height="100" class="octahedron">
+      <img src={% static "img/poly-twist-knots.png" %} alt="Trulli" width="100" height="100" class="poly-twist-knots">
+      <img src={% static "img/square-illusion.png" %} alt="Trulli" width="100" height="100" class="square">
+
+    </div>
+
+
+
+  </div>
+  <div class="cards">
+    <div class="card" style="width: 20rem;">
+      <img class="card-img-top" src={% static "img/compound.svg" %} alt="Card image cap" height="100">
+      <div class="card-body">
+        <p class="card-texth">
+          Compound
+        </p>
+        <p class="card-text">Compound is an algorithmic, autonomous interest rate protocol built for developers, to
+          unlock a universe of open financial applications.</p>
+      </div>
+      <a href={% url 'dao' %}>
+        <button class="glow-on-hover">
+          Details
+        </button>
+      </a>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <img class="card-img-top" src={% static "img/Metacartel.png" %} alt="Card image cap" height="100" ,width="100">
+      <div class="card-body">
+        <p class="card-texth">
+          MetaCartel
+        </p>
+        <p class="card-text">I you want to go fast, go alone. If you want go far go together. </p>
+      </div>
+      <a href={% url 'proposal_info' %}>
+        <button class="glow-on-hover">
+          Details
+        </button>
+      </a>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <img class="card-img-top" src={% static "img/Raid-Guild.jpeg" %} alt="Card image cap" height="100" ,width="100">
+      <div class="card-body">
+        <p class="card-texth">
+          Raid Guild War Chest
+        </p>
+        <p class="card-text">War chest of Guild</p>
+      </div>
+      <button class="glow-on-hover">
+        Details
+      </button>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <img class="card-img-top" src={% static "img/mgd.png" %} alt="Card image cap" height="100" ,width="100">
+      <div class="card-body">
+        <p class="card-texth">
+          Meta Gamma Delta dao
+        </p>
+        <p class="card-text">Inclusive ⚡️ Empowering ⚡️ Decentralized ⚡️ MGD DAO supports womxn-led projects in the
+          blockchain space through grants. Join us!</p>
+      </div>
+      <button class="glow-on-hover">
+        Details
+      </button>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <img class="card-img-top" src={% static "img/Basedfainance.png" %} alt="Card image cap" height="100" ,width="100">
+      <div class="card-body">
+        <p class="card-texth">
+          Based Fainance
+        </p>
+        <p class="card-text">It doesn't just take a based dev for some awesome returns. It takes a community. How to
+          keep your money and still invest it as a group? RIght here @BasedFinance</p>
+      </div>
+      <button class="glow-on-hover">
+        Details
+      </button>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <img class="card-img-top" src={% static "img/KZ.png" %} alt="Card image cap" height="100" ,width="100">
+      <div class="card-body">
+        <p class="card-texth">
+          KAO
+        </p>
+        <p class="card-text">Kaizen Autonomous Organization - DAO powered by Kaizen, a French private investment
+          group.
+        </p>
+      </div>
+      <button class="glow-on-hover">
+        Details
+      </button>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

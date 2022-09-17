@@ -1,0 +1,4 @@
+.gradient-custom {
+    background: rgb(0, 69, 124);
+    background: radial-gradient(circle, rgba(0, 69, 124, 1) 35%, rgba(26, 101, 158, 1) 100%);
+}

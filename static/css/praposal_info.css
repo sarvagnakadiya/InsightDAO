@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600&family=Kanit:wght@600&family=Mea+Culpa&family=Nunito:wght@200;400;600;700;800&family=Raleway:wght@700&display=swap');
+
+.background {
+    width: 100%;
+    height: auto;
+    background-image: radial-gradient(circle, #ff6b35, #00457c, #1a659e);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.navbar-light .navbar-brand {
+    color: rgb(255 255 255 / 90%) !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(255 255 255 / 90%) !important;
+}
+
+.hero {
+    height: 100PX;
+    text-align: center;
+    margin: 40px;
+    color: #70C1B3;
+    font-size: 4rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.piechart {
+    position: relative !important;
+    height: 400px !important;
+    width: 70%;
+    color: #0A2463 !important;
+    margin: 0 auto !important;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5) !important;
+    border-radius: 15px !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    overflow: hidden !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.5) !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.5) !important;
+    backdrop-filter: blur(5px) !important;
+    margin-bottom: 2.5rem !important;
+}
+
+.description {
+    position: relative !important;
+    padding: 20px;
+    width: 90%;
+    color: #fff;
+    margin: 0 auto;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5) !important;
+    border-radius: 15px !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    overflow: hidden !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.5) !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.5) !important;
+    backdrop-filter: blur(5px) !important;
+    margin-bottom: 20px;
+}
+
+.heading {
+    font-size: larger;
+    color: #fffF;
+    text-align: center;
+}

@@ -1,0 +1,425 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
+
+    <link rel="stylesheet" href={% static "css/praposal_info.css" %} />
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <style>
+        .modal {
+            background: #000 url({% static 'img/giphy.gif' %}) no-repeat center center;
+            height: 100%%;
+            width: 100%;
+            margin: 0%;
+            position: fixed;
+            z-index: 1001;
+        }
+
+        body.loading .modal {
+            overflow: hidden;
+        }
+
+        body.loading .modal {
+            display: block;
+        }
+
+        .background {
+            background-image: radial-gradient(circle, #552b43, #4e2f49, #47334e, #3f3650, #383951, #333d54, #2f4156, #2b4457, #254a5b, #1f515c, #1e565c, #235c59);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: auto;
+        }
+
+        .name {
+            position: relative;
+
+            margin: 0 auto;
+            margin-top: 40px;
+            width: 80%;
+            height: 100px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .name p {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: #fff;
+            z-index: -1;
+            font-size: 4rem;
+            transform: translate(-50%, -50%);
+        }
+
+        .grids {
+            display: flex;
+            width: 90%;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        .card {
+            width: 400px;
+            height: 150px;
+            background-color: #4e2f49;
+            margin: 20px;
+            border-radius: 20px;
+        }
+
+        .graphs {
+            width: 90%;
+            height: 490px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .graph1 {
+            width: 90%;
+            height: 490px;
+            margin: 0 auto;
+            margin-bottom: 2%;
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5) !important;
+            border-radius: 15px !important;
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            overflow: hidden !important;
+            justify-content: center !important;
+            align-items: center !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.5) !important;
+            border-left: 1px solid rgba(255, 255, 255, 0.5) !important;
+            backdrop-filter: blur(5px) !important;
+        }
+
+        .graph2-3 {
+            display: flex;
+            width: 90%;
+            height: 600px;
+            margin: 0 auto;
+            display: flex;
+            margin-bottom: 2%;
+
+        }
+
+        .graph2 {
+            width: 49%;
+            height: 590px;
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5) !important;
+            border-radius: 15px !important;
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            overflow: hidden !important;
+            justify-content: center !important;
+            align-items: center !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.5) !important;
+            border-left: 1px solid rgba(255, 255, 255, 0.5) !important;
+            backdrop-filter: blur(5px) !important;
+        }
+
+        .graph3 {
+            width: 49%;
+            height: 590px;
+            margin-left: 2%;
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5) !important;
+            border-radius: 15px !important;
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            overflow: hidden !important;
+            justify-content: center !important;
+            align-items: center !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.5) !important;
+            border-left: 1px solid rgba(255, 255, 255, 0.5) !important;
+            backdrop-filter: blur(5px) !important;
+        }
+
+        .graph4 {
+            width: 90%;
+            height: 590px;
+            margin: 0 auto;
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5) !important;
+            border-radius: 15px !important;
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            overflow: hidden !important;
+            justify-content: center !important;
+            align-items: center !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.5) !important;
+            border-left: 1px solid rgba(255, 255, 255, 0.5) !important;
+            backdrop-filter: blur(5px) !important;
+        }
+
+        .praposals {
+            width: 89%;
+            height: 470px;
+            background-color: ;
+            margin: 0 auto;
+        }
+
+        .praposal1 {
+            width: 100%;
+            height: 25%;
+
+            border: 2px solid #fff;
+            background: transparent;
+
+        }
+
+        .card {
+            width: 400px;
+            height: 150px;
+            margin: 20px;
+            color: #FFFFFF;
+            border-radius: 20px;
+            margin-bottom: 2%;
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5) !important;
+            border-radius: 15px !important;
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            overflow: hidden !important;
+            justify-content: center !important;
+            align-items: center !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.5) !important;
+            border-left: 1px solid rgba(255, 255, 255, 0.5) !important;
+            backdrop-filter: blur(5px) !important;
+        }
+
+        .card:hover {
+            width: 420px;
+            height: 170px;
+        }
+
+        .praposal1 {
+            width: 100%;
+            height: 20%;
+            padding: 20px;
+            border: 2px solid #fff;
+            color: #fff;
+            background: transparent;
+
+        }
+    </style>
+
+</head>
+
+<body class='background'>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light9">
+        <a class="navbar-brand" href="#">Know your DAO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href={% url 'index' %}>Home <span
+                        class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Features</a>
+                <a class="nav-item nav-link" href="#">Pricing</a>
+                <!-- <a class="nav-item nav-link disabled" href="#">Disabled</a> -->
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="name">
+        <p>{{ name }}</p>
+    </div>
+    <div class="grids">
+        <div class="card">
+            Total Praposals : 42
+        </div>
+        <div class="card">
+            Number Of Unique Voters : 620
+        </div>
+        <div class="card">
+            Number of Unique Praposer : 11
+        </div>
+    </div>
+    <div>
+        <div class="praposals">
+            <div class="praposal1">
+                Background
+                There were timing issues with the Sablier stream creation in the past two canceled proposals 94 and 95
+                that has been corrected in this proposal. More information on the timing issue and how we've corrected
+                for it is available here.
+
+            </div>
+            <div class="praposal1">
+                Simple Summary
+                A proposal to adjust two (2) parameters for two (2) Compound assets.
+
+            </div>
+            <div class="praposal1">
+                Summary
+                This proposal reduces the MKR market's borrow limit from the current value of 25,000 MKR to 5,000 MKR...
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="graph1" id="chartContainer">
+        <canvas id="chart"></canvas>
+    </div>
+
+    <div class="graph2-3">
+        <div class="graph2" id="chart2_container">
+            <canvas id="chart2"></canvas>
+
+        </div>
+        <div class="graph3" id="chart3_container">
+            <canvas id="chart3"></canvas>
+        </div>
+    </div>
+    {% comment %} <div class="graph4">
+
+    </div> {% endcomment %}
+
+
+
+    <div class="modal">
+        <!-- Place at bottom of page -->
+    </div>
+
+
+    <script>
+
+        function set_chart() {
+            $body = $("body");
+
+            $.ajax({
+                url: '{% url "set_chart" %}',
+                type: 'POST',
+                cache: false,
+                processData: false,
+                contentType: false,
+                beforeSend: function () { $body.addClass("loading"); },
+
+                success: function (data) {
+                    document.getElementById("chartContainer").innerHTML = '&nbsp;';
+                    document.getElementById("chartContainer").innerHTML = '<canvas id="chart"></canvas>';
+                    document.getElementById("chart").style.display = "block";
+                    let ctx = document.getElementById("chart").getContext("2d");
+                    let chart = new Chart(ctx, {
+                        type: 'bar',
+                        data: data.vote_data
+                        ,
+                        options: {
+                            title: {
+                                text: 'Votes Vs ProposalId',
+                                display: true,
+                                scales: {
+                                    yAxes: [{
+                                        ticks: {
+                                            beginAtZero: true
+                                        }
+                                    }]
+                                }
+
+                            },
+                            maintainAspectRatio: false,
+                            responsive: true,
+                        }
+
+                    });
+                    Chart.defaults.global.defaultFontColor = "#fff";
+
+                    document.getElementById("chart2_container").innerHTML = '&nbsp;';
+                    document.getElementById("chart2_container").innerHTML = '<canvas id="chart2" height="400" width="400"></canvas>';
+                    document.getElementById("chart2").style.display = "block";
+                    let ctx2 = document.getElementById("chart2").getContext("2d");
+                    let chart2 = new Chart(ctx2, {
+
+                        type: 'bar',
+                        data: data.voter_data,
+                        responsive: true,
+                        scaleFontColor: '#FFFFFFF',
+                        options: {
+
+                            plugins: {
+                                legend: {
+                                    labels: {
+                                        // This more specific font property overrides the global property
+                                        font: {
+                                            size: 14
+                                        }
+                                    }
+                                }
+                            },
+
+                            title: {
+                                text: 'Total Vote and Numbers of Praposals Voted For Vs Voter',
+                                display: true,
+                                scales: {
+                                    xAxes: [{
+                                        gridLines: {
+                                            display: false
+                                        },
+                                        ticks: {
+                                            color: "white"
+                                        }
+                                    }],
+                                    yAxes: [{
+                                        gridLines: {
+                                            display: false
+                                        },
+                                        ticks: {
+                                            color: "white"
+                                        }
+                                    }]
+                                }
+
+                            },
+                            maintainAspectRatio: false,
+                            responsive: true,
+                        }
+                    });
+                    document.getElementById("chart3_container").innerHTML = '&nbsp;';
+                    document.getElementById("chart3_container").innerHTML = '<canvas id="chart3" height="400" width="400"></canvas>';
+                    document.getElementById("chart3").style.display = "block";
+                    let ctx3 = document.getElementById("chart3").getContext("2d");
+                    let chart3 = new Chart(ctx3, {
+                        type: 'bar',
+                        data: data.praposals_data
+                        ,
+                        options: {
+                            title: {
+                                text: 'Support and Againts of ProposalId',
+                                display: true,
+                                scales: {
+                                    yAxes: [{
+                                        ticks: {
+                                            beginAtZero: true
+                                        }
+                                    }]
+                                }
+
+                            },
+                            maintainAspectRatio: false,
+                            responsive: true,
+                        }
+                    });
+
+
+                },
+                complete: function () { $body.removeClass("loading"); },
+                error: function () {
+                    alert("There is some problem occurred while processing your file. Kindly check your network.");
+                }
+
+            });
+            return false;
+        }
+        set_chart()
+    </script>
+
+</body>
+
+</html>

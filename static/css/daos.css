@@ -1,0 +1,182 @@
+.card {
+    position: relative !important;
+    height: 400px !important;
+    width: 400px !important;
+    color: #0A2463 !important;
+    margin: 0 auto !important;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5) !important;
+    border-radius: 15px !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    overflow: hidden !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.5) !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.5) !important;
+    backdrop-filter: blur(5px) !important;
+}
+
+.bdy {
+    background-image: radial-gradient(circle, #552b43, #4e2f49, #47334e, #3f3650, #383951, #333d54, #2f4156, #2b4457, #254a5b, #1f515c, #1e565c, #235c59);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.cards {
+    width: 100%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, 28rem);
+    grid-gap: 6rem;
+    justify-content: center;
+}
+
+.herodiv {
+    background-image: url();
+    width: 90%;
+    height: 400px;
+    margin: 0 auto;
+
+    border-radius: 15px !important;
+    align-items: center !important;
+
+
+}
+
+.heading {
+    font-family: 'Raleway', sans-serif;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.heading1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3rem;
+}
+
+.bg-light9 {
+    background-color: transparent;
+}
+
+.infinity {
+    position: absolute;
+    top: 130px;
+    right: 300px;
+}
+
+.octahedron {
+    position: absolute;
+    top: 80px;
+    left: 400px;
+}
+
+.poly-twist-knots {
+    position: absolute;
+    top: 230px;
+    left: 150px;
+}
+
+.square {
+    position: absolute;
+    top: 200px;
+}
+
+.card-text {
+    color: #fff !important;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.card-texth {
+    color: #fff !important;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.card-img-top {
+    margin-top: 40px;
+
+}
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #0A2463;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: rgba(0, 0, 0, 0.128)
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.card-img-top {
+    width: 100px !important;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.navbar-light .navbar-brand {
+    color: rgb(255 255 255 / 90%) !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(255 255 255 / 90%) !important;
+}

@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
+
+  <link rel="stylesheet" href={% static "css/praposal_info.css" %} />
+  <title>
+    Praposal Info
+  </title>
+
+</head>
+
+<body class="background">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light9">
+    <a class="navbar-brand" href="#">Know your DAO</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href={% url 'index' %}>Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">Features</a>
+        <a class="nav-item nav-link" href="#">Pricing</a>
+        <a class="nav-item nav-link disabled" href="#">Disabled</a>
+      </div>
+    </div>
+  </nav>
+  <div class="hero">
+    PROPOSAL INFO
+  </div>
+  <div class="piechart">
+    <div id="chartContainer" style="height='500px';width='500px'">
+      <canvas id="chart"></canvas>
+    </div>
+  </div>
+  <div class="description">
+    <p class="heading"> Summary</p>
+    This proposal reduces the MKR market's borrow limit from the current value of 25,000 MKR to 5,000 MKR.
+    Reasoning
+    Lowering the borrow limit makes it more difficult for malicious parties to interfere with MakerDAO governance. This
+    should reduce the likelihood of disruption to Compound's DAI and MKR markets, and also minimize risk to the wider
+    defi ecosystem.
+    MKR is not frequently borrowed, and based on historical demand across Aave and Compound this 5,000 token limit is
+    unlikely to limit typical usage.
+    See the full discussion here.
+
+  </div>
+
+
+  <script>
+    Chart.defaults.global.defaultFontColor = "#fff";
+    document.getElementById("chartContainer").innerHTML = '&nbsp;';
+    document.getElementById("chartContainer").innerHTML = '<canvas id="chart" height=350 width=600 ></canvas>';
+    document.getElementById("chart").style.display = "block";
+    let ctx = document.getElementById("chart").getContext("2d");
+    let chart = new Chart(ctx, {
+      type: 'pie',
+      data: data = {
+        labels: [
+          'Support',
+          'Againts'
+        ],
+        datasets: [{
+          label: 'Support Vs Againts',
+          data: [300000, 50000],
+          backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(255, 205, 86)'
+          ],
+          hoverOffset: 4
+        }]
+      }
+      ,
+      options: {
+        title: {
+          display: true,
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+          }
+
+        },
+        maintainAspectRatio: false,
+        responsive: true,
+      }
+
+    });
+
+  </script>
+
+
+</body>
