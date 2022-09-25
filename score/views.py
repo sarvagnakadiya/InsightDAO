@@ -8,6 +8,7 @@ import numpy as np
 from faker import Factory
 from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 import collections
+import queries
 
 
 # Create your views here.

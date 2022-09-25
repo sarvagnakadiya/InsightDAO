@@ -1,4 +1,4 @@
-# KnowYourDAOs
+# InsightsDAO
 
 Check all your DAOs activities, from voting to accounting, with a consistent, all-in-one layout to help you analyze the performance of your DAO
 
@@ -10,7 +10,7 @@ And for checking all DAOs you can simply come onto our site.
 
 
 
-# What will I be able to see on KnowYourDAOs?
+# What will I be able to see on InsightsDAO?
 
 * Amount of tokens coming into your DAO.
 * Amount of tokens moving out of your DAO.
@@ -19,14 +19,14 @@ And for checking all DAOs you can simply come onto our site.
 * Voting History & Pattern of the DAO.
 * Activity of all the members with respect to proposal submission and voting.
 
-# Why do I use KnowYourDAOs?
+# Why do I use InsightsDAO?
 
 Well, we know the hassle of keeping track of different proposals and accounting of a DAO on the user side.
 And, the hassle of providing this information for the creator of the DAO.
 So, this will be your one stop place for having meaningful insights from the DAOs activity. 
 
 
-# How can the contract address owner/executive body of the DAO interact with KnowYourDAOs?
+# How can the contract address owner/executive body of the DAO interact with InsightsDAO?
 
 The contract address owner/executive body will have the option to delegate or fill in the details of their transactions. 
 So, if there is an outgoing token from the treasury they can help in mentioning the particulars of those whether it was paid for Marketing, Service Providers, Salaries and so on. This will provide in depth understanding of how the performance of the DAO is.
